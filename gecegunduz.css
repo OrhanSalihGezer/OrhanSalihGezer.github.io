@@ -1,0 +1,42 @@
+.theme-btn {
+    position: absolute;
+    left: 100vh;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    background: rgba(var(--accent,8,119,255),0.95);
+    color: white;
+    border: none;
+    align-items: center;
+    
+}
+
+.theme-btn.rotate {
+    animation: spin 0.6s ease;
+}
+
+@keyframes spin {
+    from {
+        transform: translateY(-50%) rotate(0deg);
+    }
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+
+/* Dark mode now handled by CSS variables in each page stylesheet (body.dark) */
+/* Responsive */
+@media (max-width: 768px){
+  .theme-btn{
+     width: 50px;
+    height:40px;
+    left: 10px;
+    top: 100px;
+  }  
+    
+}

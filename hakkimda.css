@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ :root{
+    --page-bg: #f5f7fa;
+    --card-bg: #ffffff;
+    --text: #102031;
+    --muted: #6b7280;
+    --accent: 8,119,255;
+}
+
+body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--page-bg);
+        color: var(--text);
+        margin: 0;
+        overflow-x: hidden;
+}
+
+body.dark{
+    --page-bg: #0b1220;
+    --card-bg: #0f1720;
+    --text: #e6eef9;
+    --muted: #9aa6b2;
+    --accent: 88,156,255;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text);
+  
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline-block;
+    text-align: center;
+    margin: 5px 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+#d1 {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+    padding: 10px 20px;
+    background-color: var(--card-bg);
+    border-radius: 50px;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+/* Nav link colors consistent */
+#d1 a { color: var(--muted); transition: color .18s ease; }
+#d1 a:hover { color: rgb(var(--accent)); font-weight:600; }
+#d1 a.active { color: rgb(var(--accent)); font-weight:700; border-bottom:2px solid rgb(var(--accent)); padding-bottom:6px; }
+
+#d1:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+a:hover {
+    color: #0877ff;
+    font-weight: bold;
+}
+
+#d1 a.active {
+    color: #0877ff;
+    font-weight: bold;
+    border-bottom: 2px solid #0877ff;
+}
+
+#d2 {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 20px 80px;
+    text-align: center; ;
+}
+#d2 h1{
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text);
+}
+
+#d2 img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-bottom: 250px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+#hakkimda-metni {
+    background-color: var(--card-bg);
+    border-radius: 90px;
+    max-width: 800px;
+    margin-top: -200px;
+    text-align: left;
+}
+#hakkimda-metni h1 {
+    font-size: 36px;
+    color: var(--text);
+    margin-bottom: 20px;
+    padding-top: 40px;
+    padding-left: 40px;
+}
+#hakkimda-metni p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--muted);
+    padding: 0 40px 40px 40px;
+    margin-bottom: 20px;
+}
+#d2 img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #d1 {
+        left: 0;
+        right: 0;
+        transform: none;
+        top: 0;
+        border-radius: 0;
+        padding: 15px 10px;
+    }
+
+    li {
+        margin: 2px 5px;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+       h1 {
+        margin-top: 100px;
+        font-size: 32px;
+        margin-top: 50px;
+    }
+
+
+    #d2 {
+        padding: 100px 20px 60px;
+    }
+
+    #d2 img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 140px;
+    }
+
+    #d2 h1 {
+        font-size: 32px;
+    } 
+
+    #hakkimda-metni {
+        max-width: 100%;
+        margin-top: -120px;
+        padding: 22px;
+        border-radius: 28px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+        width: calc(100% - 32px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #hakkimda-metni h1 {
+        font-size: 28px;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+
+    #hakkimda-metni p {
+        font-size: 16px;
+        padding: 0 6px 20px 6px;
+        line-height: 1.8;
+        text-align: left;
+    }
+}
+
+/* Dark-mode specific positioning tweaks for Hakkımda */
+body.dark #d2 img{
+    /* reduce the large bottom margin in dark mode so text doesn't push too far down */
+    margin-bottom: 40px;
+    border-color: rgba(255,255,255,0.06);
+}
+
+body.dark #hakkimda-metni{
+    /* bring the text block closer to the hero image in dark mode */
+    margin-top: -140px;
+    background-color: var(--card-bg, #0f1720);
+    transition: margin-top 0.3s ease, background-color 0.3s ease;
+    padding-bottom: 40px;
+}
+
+@media (max-width:768px){
+  body.dark #hakkimda-metni{ margin-top: -90px; }
+  body.dark #d2 img{ margin-bottom: 120px; }
+}
+
+/* Footer styles */
+.site-footer{
+    background: var(--card-bg, #ffffff);
+    border-top: 1px solid rgba(0,0,0,0.06);
+    padding: 28px 0;
+}
+.footer-container{ max-width:1100px; margin:0 auto; padding:0 20px; display:flex; flex-direction:column; align-items:center; gap:8px; }
+.footer-brand{ display:flex; gap:10px; align-items:center; color: var(--text, #102031); font-weight:700; }
+.footer-logo{ width:40px; height:40px; border-radius:6px; object-fit:cover; }
+.footer-nav{ display:flex; gap:12px; flex-wrap:wrap; justify-content:center; }
+.footer-nav a{ color: var(--muted, #6b7280); font-size:14px; text-decoration:none; }
+.footer-copy{ font-size:13px; color: var(--muted, #6b7280); }

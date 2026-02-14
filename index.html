@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orhan Saih Gezer - Frontend Developer</title>
+    <link rel="stylesheet" href="AnaSayfa.css">
+    <link rel="stylesheet" href="gecegunduz.css">
+    <link rel="stylesheet" href="iletisim.css">
+  
+</head>
+<body>
+    <nav id="d1">
+        <ul>
+            <li><a href="index.html" class="active">Ana Sayfa</a></li>
+            <li><a href="projelerim.html">Projelerim</a></li>
+            <li><a href="hakkimda.html">Hakkımda</a></li>
+            <li><a href="#iletisim">İletişim</a></li>
+        </ul>
+         <button id="themeToggle" class="theme-btn">🌙 Gece Modu</button>
+    </nav>
+
+    <section id="d2" >
+        <img src="img/logo.png" alt="Orhan Saih Gezer" onerror="this.style.display='none'">
+        <h1>Merhaba Ben Orhan Saih Gezer</h1>
+        <h3>Frontend Developer</h3>
+        <div class="button-group">
+            <button class="bt1" onclick="window.location.href='projelerim.html'">Projelerim</button>
+            <button class="bt2" onclick="window.location.href='hakkimda.html'">Hakkımda</button>
+        </div>
+    </section>
+
+        <h1 id="iletisim">İletişim</h1>
+        <p class="contact-intro">Herhangi bir soru, iş teklifi veya iş birliği için aşağıdaki kanallardan bana rahatlıkla ulaşabilirsiniz.</p>
+        <section class="contacts-wrapper">
+            <ul class="contact-list">
+                <li class="contact-item">
+                    <a class="contact-card" href="mailto:orhansalihgezer@gmail.com" aria-label="E-posta: orhansalihgezer@gmail.com">
+                        <span class="contact-emoji">📧</span>
+                        <div class="contact-content">
+                            <span class="contact-label">E-posta</span>
+                            <span class="contact-text">orhansalihgezer@gmail.com</span>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="contact-item">
+                    <a class="contact-card" href="tel:+905417654685" aria-label="Telefon: +90 541 76 46 85">
+                        <span class="contact-emoji">📞</span>
+                        <div class="contact-content">
+                            <span class="contact-label">Telefon</span>
+                            <span class="contact-text">+90 541 76 46 85</span>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="contact-item">
+                    <a class="contact-card" href="https://www.instagram.com/salih_.gezer/" target="_blank" rel="noopener" aria-label="Instagram hesabım">
+                        <img src="img/instagram.png" alt="Instagram" class="contact-icon">
+                        <div class="contact-content">
+                            <span class="contact-label">Sosyal</span>
+                            <span class="contact-text">Instagram</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+
+ 
+ <script src="tema.js"></script>
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="img/logo.png" alt="Orhan Saih Gezer" class="footer-logo" onerror="this.style.display='none'">
+                <span>Orhan Saih Gezer</span>
+            </div>
+            <nav class="footer-nav">
+                <a href="index.html">Ana Sayfa</a>
+                <a href="projelerim.html">Projelerim</a>
+                <a href="hakkimda.html">Hakkımda</a>
+                <a href="index.html#iletisim">İletişim</a>
+            </nav>
+            <div class="footer-copy">© 2026 Orhan Saih Gezer. Tüm hakları saklıdır.</div>
+        </div>
+    </footer>
+</body>
+</html>
